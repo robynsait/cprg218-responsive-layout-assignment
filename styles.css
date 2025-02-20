@@ -1,0 +1,100 @@
+/* Whole Page Styling */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container {
+    background-color: #120323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.header-container h1 {
+    color: #97bf04;
+}
+
+main img {
+    border: 5px solid #d9043d;
+    width: 100%;
+}
+
+main h2 {
+    color: #120323;
+}
+
+aside {
+    background-color: #97bf04;
+    padding: 15px;
+}
+
+footer {
+    background-color: #d9043d;
+    color: #fff;
+    padding: 4%;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+
+/* Responsive Styling */
+
+/* Smallest Size */
+/* Applied same styles to stylesheet above to ensure sizing doesn't revert when smaller than min-width size */
+@media screen and (min-width: 768px) {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Medium Size */
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 2%;
+    }
+    figure {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    main img {
+        width: 300px;
+        /* object-fit: cover; */ /* Would add this but it slightly cuts off the image at smaller sizes so will leave it out as assignment says not to cut off the puffin */
+    }
+}
+
+/* Large Size */
+@media screen and (min-width: 1001px) and (max-width: 1920px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 2%;
+    }
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    main figure {
+        display: flex;
+        gap: 20px;
+    }
+    main img {
+        max-width: 300px;
+        max-height: 350px;
+        width: auto;
+        height: auto;
+    }
+    main h2 {
+        margin-top: 0px;
+    }
